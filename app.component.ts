@@ -3,33 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',  
   template: `
-
-    <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-   	<button type="button" class="navbar-toggle collapsed" 
-data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" routerLink="">ngProject</a>
-        </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" 
-id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li><a routerLink="" routerLinkActive="active">Home</a></li>
- 		<li><a routerLink="GitHub" 
-routerLinkActive="active">GitHub</a></li>
-        </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>                                    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Home<span class="sr-only">(current)</span></a>
+        </li>        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="GitHub">GitHub</a>        
+        </li>
+      </ul>
+    </div>
+    </nav>
     <router-outlet></router-outlet>                                                                   
     `,
   providers: []
