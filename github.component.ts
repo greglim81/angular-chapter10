@@ -54,9 +54,7 @@ export class GitHubComponent {
 
   ngOnInit() {
     this.searchControl.valueChanges
-        .filter(text => text.length >= 3)   
-        .debounceTime(400)   
-        .distinctUntilChanged()    
+        .pipe(filter(text => text.length >= 3), debounceTime(400),distinctUntilChanged())                
         .subscribe(value => {
           this.isLoading = true; 
           this._githubService.getGitHubData(value)
@@ -64,6 +62,6 @@ export class GitHubComponent {
                   this.isLoading = false;        
                   this.users = data.items;                    
           });                                  
-    });          
+    });                    
   } 
 }
